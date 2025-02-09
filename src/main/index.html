@@ -441,28 +441,28 @@
               <ul
                 class="space-y-1 text-xs font-normal tracking-wide lg:text-lg"
               >
-                <li class="flex items-start gap-1.5">
+                <li class="flex items-start gap-1.5 sm:items-center">
                   <i
                     data-lucide="circle"
                     class="size-3.5 fill-white text-white"
                   ></i>
                   <h2>Hair Transplantation</h2>
                 </li>
-                <li class="flex items-start gap-1.5">
+                <li class="flex items-start gap-1.5 sm:items-center">
                   <i
                     data-lucide="circle"
                     class="size-3.5 fill-white text-white"
                   ></i>
                   <h2>Beard Transplantation</h2>
                 </li>
-                <li class="flex items-start gap-1.5">
+                <li class="flex items-start gap-1.5 sm:items-center">
                   <i
                     data-lucide="circle"
                     class="size-3.5 fill-white text-white"
                   ></i>
                   <h2>Afro Type Hair Transplantation</h2>
                 </li>
-                <li class="flex items-start gap-1.5">
+                <li class="flex items-start gap-1.5 sm:items-center">
                   <i
                     data-lucide="circle"
                     class="size-3.5 fill-white text-white"
@@ -1068,12 +1068,8 @@
           document.addEventListener('DOMContentLoaded', function () {
             const scrollers = document.querySelectorAll('.scroller')
 
-            if (
-              !window.matchMedia('(prefers-reduced-motion: reduce)').matches
-            ) {
-              addAnimation()
-              addAnimation()
-            }
+            addAnimation()
+            addAnimation()
 
             function addAnimation() {
               scrollers.forEach(scroller => {
