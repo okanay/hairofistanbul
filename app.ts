@@ -87,7 +87,7 @@ app.post('/github-push-event', async c => {
 function runBuildProcess(): void {
   exec(
     'git pull && bun run build && sudo systemctl restart hairofistanbul.service',
-    { cwd: '/root/guideofdubai' },
+    { cwd: '/root/hairofistanbul' },
     (error: Error | null, stdout: string, stderr: string) => {
       if (error) {
         console.error(`Exec error: ${error}`)
