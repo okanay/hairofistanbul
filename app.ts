@@ -56,7 +56,7 @@ app.get('/', c => {
   return c.html(html.text())
 })
 
-const secret = 'LDOUwjBFGyori7tltMnRQ2YtanvObPZOenCowk/Cq8c='
+const secret = 'HOIOUwjBFGyori7tltMnRQ2YtanvObPZOenCowk/Cq8c='
 
 app.post('/github-push-event', async c => {
   const githubEvent = c.req.header('X-GitHub-Event')
