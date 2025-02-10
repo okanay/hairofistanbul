@@ -432,7 +432,7 @@
       <section
         id="hero"
         aria-label="Hero Section"
-        class="relative after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:bg-gradient-to-b after:from-neutral-50 after:via-neutral-50/50 after:to-neutral-50 lg:my-4 lg:h-[40rem]"
+        class="relative after:absolute after:left-0 after:top-0 after:z-10 after:size-full after:bg-gradient-to-b after:from-neutral-50/90 after:via-neutral-50/40 after:to-neutral-50 lg:my-4 lg:h-[40rem]"
       >
         <img
           loading="lazy"
@@ -454,7 +454,7 @@
               src="assets/images/main/hero/doctor-blur.webp"
               data-src="assets/images/main/hero/doctor.png"
               alt="Professional Hair Transplant Doctor"
-              class="lazy-image absolute left-[25%] z-30 h-full max-h-[20.5rem] -translate-x-1/2 translate-y-[-10%] sm:left-[30%] sm:max-h-[27.5rem] lg:left-[46%] lg:z-40"
+              class="lazy-image absolute left-[25%] z-30 h-full max-h-[20.5rem] -translate-x-1/2 translate-y-[-10%] sm:left-[30%] sm:max-h-[27.5rem] md:max-h-[32.5rem] lg:left-[44.5%] lg:z-40"
               style="filter: blur(10px)"
             />
             <aside
@@ -903,7 +903,7 @@
               src="assets/images/gray-placeholder.webp"
               data-src="assets/images/main/features/background.png"
               alt="Hair Transplant Before After"
-              class="lazy-image -top-[10%] right-[5%] z-10 mx-auto w-full max-w-[32.5rem] scale-x-[-1] object-cover lg:absolute lg:mx-0 lg:h-[26.25rem] lg:w-auto lg:max-w-max"
+              class="lazy-image -top-[10%] right-[5%] z-10 mx-auto w-full max-w-[32.5rem] object-cover sm:scale-x-[-1] lg:absolute lg:mx-0 lg:h-[26.25rem] lg:w-auto lg:max-w-max"
               style="filter: blur(10px)"
             />
             <div class="relative z-20 flex flex-shrink-0 flex-col gap-4">
@@ -1213,13 +1213,13 @@
         class="relative mb-14 lg:bg-neutral-800"
       >
         <div class="mx-auto flex max-w-7xl flex-col lg:flex-row">
-          <div class="flex flex-1 flex-col justify-center bg-neutral-800 p-8">
+          <div class="flex flex-1 flex-col justify-center bg-[#505050] p-8">
             <div class="max-w-xl">
               <h2 class="mb-2 text-3xl font-semibold text-white lg:text-5xl">
                 HAIR TRANSPLANT
               </h2>
               <h3
-                class="mb-6 bg-gradient-to-r from-primary-300 to-primary-200 bg-clip-text text-5xl font-semibold text-transparent lg:text-7xl"
+                class="mb-6 bg-gradient-to-r from-primary-400 to-primary-300 bg-clip-text text-5xl font-semibold text-transparent lg:text-7xl"
               >
                 DUBAI
               </h3>
@@ -1260,6 +1260,37 @@
       </section>
     </main>
     <footer class="bg-primary-400 text-white">
+      <button
+        id="whatsapp-button"
+        class="fixed bottom-4 right-4 z-[8000] rtl:!left-2 rtl:!right-auto"
+      >
+        <a
+          href="https://api.whatsapp.com/send/?phone=905326505151&text=Hello%2C+I+would+like+to+get+information+about+Hair+of+Istanbul.&type=phone_number&app_absent=0"
+          aria-label="Contact us via WhatsApp"
+          class="group relative flex items-center gap-2 p-2"
+        >
+          <span
+            class="pointer-events-none absolute right-full mr-3 text-nowrap rounded-lg border border-neutral-200 bg-white px-4 py-2 text-sm text-neutral-700 opacity-0 shadow-lg transition-all duration-300 ease-out before:absolute before:-right-2 before:top-1/2 before:-translate-y-1/2 before:border-8 before:border-transparent before:border-l-white before:content-[''] group-hover:-translate-x-1 group-hover:scale-100 group-hover:opacity-100"
+          >
+            Contact us via WhatsApp
+          </span>
+
+          <div
+            class="pointer-events-none absolute inset-0 animate-ping rounded-full bg-green-500 opacity-20 group-hover:opacity-30"
+          ></div>
+
+          <div
+            class="relative rounded-full bg-white p-2 shadow-lg transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl"
+          >
+            <img
+              src="assets/images/social-media-icons/whatsapp-brand.svg"
+              alt="Whatsapp icon"
+              class="size-8 transition-transform duration-300 ease-out group-hover:rotate-12 md:size-12"
+            />
+          </div>
+        </a>
+      </button>
+
       <div
         class="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-8 lg:gap-12 lg:py-16"
       >
