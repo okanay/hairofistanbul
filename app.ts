@@ -82,6 +82,8 @@ app.post('/github-push-event', async c => {
   return c.body(null)
 })
 
+// console.log('Server is running on port 3082')
+
 function runBuildProcess(): void {
   exec(
     'git pull && bun run build && sudo systemctl restart hairofistanbul.service',
