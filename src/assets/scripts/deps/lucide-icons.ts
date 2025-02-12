@@ -1,6 +1,7 @@
 import {
   BookOpen,
   Building,
+  ChevronDown,
   Circle,
   createIcons,
   Heart,
@@ -27,6 +28,7 @@ function SetLucideIcons() {
       HelpCircle,
       Mail,
       BookOpen,
+      ChevronDown,
     },
   })
 }

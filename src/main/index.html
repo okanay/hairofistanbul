@@ -82,13 +82,12 @@
     <link rel="stylesheet" href="assets/styles/globals-out.css" />
     <script type="module" src="assets/scripts/deps/lucide-icons.js"></script>
     <script type="module" src="assets/scripts/layout.js"></script>
-    <script type="module" src="assets/scripts/main.js"></script>
   </head>
   <body class="bg-neutral-50 font-custom font-light text-neutral-600">
     <header>
       <!-- Desktop Navigation -->
       <nav
-        class="mx-auto hidden max-w-7xl items-start justify-between gap-12 px-4 pb-2 pt-6 lg:flex"
+        class="relative z-[100] mx-auto hidden max-w-7xl items-start justify-between gap-12 px-4 pb-2 pt-6 lg:flex"
       >
         <img
           src="assets/images/brand.svg"
@@ -96,60 +95,191 @@
         />
 
         <ul
-          class="group flex w-fit flex-wrap items-end justify-end gap-x-6 gap-y-3 text-end text-xs tracking-wide xl:translate-y-[10%] xl:text-sm"
+          class="group flex w-fit flex-wrap items-end justify-end gap-x-6 gap-y-3 text-end text-xs tracking-wide text-neutral-950 xl:translate-y-[10%] xl:text-sm"
         >
           <li
-            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-70"
+            class="group/treatments relative transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
           >
-            <a href="https://www.hairofistanbul.com/hair-transplantation-fue/">
+            <a
+              href="https://www.hairofistanbul.com/hair-transplantation-fue/"
+              class="flex items-center"
+            >
               TREATMENTS
+              <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i>
             </a>
+            <!-- Mega menu dropdown -->
+            <div
+              style="scrollbar-width: none; -ms-overflow-style: none"
+              class="pointer-events-none absolute left-0 top-full w-[600px] pt-4 group-hover/treatments:pointer-events-auto"
+            >
+              <div
+                class="rounded-lg border border-neutral-200 bg-white/75 opacity-0 backdrop-blur transition-all duration-300 group-hover/treatments:opacity-100"
+              >
+                <div
+                  class="grid max-h-[70vh] grid-cols-2 gap-4 overflow-y-auto p-4"
+                >
+                  <!-- Sol Sütun -->
+                  <div class="space-y-4 text-left">
+                    <a
+                      href="https://www.hairofistanbul.com/hair-transplantation-fue/"
+                      class="block rounded-lg border border-transparent p-4 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                    >
+                      <div class="mb-1 text-xs font-semibold text-neutral-700">
+                        Hair Transplant
+                      </div>
+                      <p class="text-xs text-neutral-500">
+                        Professional hair transplantation services with modern
+                        techniques.
+                      </p>
+                    </a>
+                    <a
+                      href="https://www.hairofistanbul.com/beard-transplant/"
+                      class="block rounded-lg border border-transparent p-4 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                    >
+                      <div class="mb-1 text-xs font-semibold text-neutral-700">
+                        Beard Transplant
+                      </div>
+                      <p class="text-xs text-neutral-500">
+                        Get a fuller, natural-looking beard with our specialized
+                        transplant service.
+                      </p>
+                    </a>
+                    <a
+                      href="https://www.hairofistanbul.com/afro-type-hair-transplant/"
+                      class="block rounded-lg border border-transparent p-4 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                    >
+                      <div class="mb-1 text-xs font-semibold text-neutral-700">
+                        Afro Type
+                      </div>
+                      <p class="text-xs text-neutral-500">
+                        Specialized techniques for afro-textured hair
+                        transplantation.
+                      </p>
+                    </a>
+                    <a
+                      href="https://www.hairofistanbul.com/woman-hair-transplant/"
+                      class="block rounded-lg border border-transparent p-4 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                    >
+                      <div class="mb-1 text-xs font-semibold text-neutral-700">
+                        Woman Hair Transplant
+                      </div>
+                      <p class="text-xs text-neutral-500">
+                        Custom solutions for female pattern hair loss and
+                        thinning.
+                      </p>
+                    </a>
+                    <a
+                      href="https://www.hairofistanbul.com/forehead-reduction/"
+                      class="block rounded-lg border border-transparent p-4 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                    >
+                      <div class="mb-1 text-xs font-semibold text-neutral-700">
+                        Forehead Reduction
+                      </div>
+                      <p class="text-xs text-neutral-500">
+                        Surgical technique to achieve a more balanced facial
+                        proportion.
+                      </p>
+                    </a>
+                  </div>
+                  <!-- Sağ Sütun -->
+                  <div class="space-y-4 text-left">
+                    <a
+                      href="https://www.hairofistanbul.com/fue-technique/"
+                      class="block rounded-lg border border-transparent p-4 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                    >
+                      <div class="mb-1 text-xs font-semibold text-neutral-700">
+                        FUE Technique
+                      </div>
+                      <p class="text-xs text-neutral-500">
+                        Advanced follicular unit extraction method for natural
+                        results.
+                      </p>
+                    </a>
+                    <a
+                      href="https://www.hairofistanbul.com/dhi-technique/"
+                      class="block rounded-lg border border-transparent p-4 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                    >
+                      <div class="mb-1 text-xs font-semibold text-neutral-700">
+                        DHI Technique
+                      </div>
+                      <p class="text-xs text-neutral-500">
+                        Direct hair implantation for precise and dense hair
+                        restoration.
+                      </p>
+                    </a>
+                    <a
+                      href="https://www.hairofistanbul.com/scalp-micropigmentation/"
+                      class="block rounded-lg border border-transparent p-4 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                    >
+                      <div class="mb-1 text-xs font-semibold text-neutral-700">
+                        Scalp Micropigmentation
+                      </div>
+                      <p class="text-xs text-neutral-500">
+                        Non-surgical solution for the appearance of fuller hair.
+                      </p>
+                    </a>
+                    <a
+                      href="https://www.hairofistanbul.com/revision-hair-transplant/"
+                      class="block rounded-lg border border-transparent p-4 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                    >
+                      <div class="mb-1 text-xs font-semibold text-neutral-700">
+                        Revision Hair Transplant
+                      </div>
+                      <p class="text-xs text-neutral-500">
+                        Corrective procedures for previous hair transplant
+                        treatments.
+                      </p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </li>
           <li
-            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-70"
+            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
           >
             <a href="https://www.hairofistanbul.com/after-care/">
               AFTER CARE
             </a>
           </li>
           <li
-            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-70"
+            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
           >
             <a href="https://www.hairofistanbul.com/our-clinic/">
               OUR CLINIC
             </a>
           </li>
           <li
-            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-70"
+            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
           >
             <a href="https://www.hairofistanbul.com/medical-team/">
               HAIR CLINIC TEAM
             </a>
           </li>
           <li
-            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-70"
+            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
           >
             <a href="https://www.hairofistanbul.com/gallery/"> GALLERY </a>
           </li>
           <li
-            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-70"
+            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
           >
             <a href="https://www.hairofistanbul.com/before-after/">
               HAIR TRANSPLANT BEFORE & AFTER
             </a>
           </li>
           <li
-            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-70"
+            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
           >
             <a href="https://www.hairofistanbul.com/faq/"> FAQ </a>
           </li>
           <li
-            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-70"
+            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
           >
             <a href="https://www.hairofistanbul.com/contact/"> CONTACT </a>
           </li>
           <li
-            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-70"
+            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
           >
             <a href="https://www.hairofistanbul.com/blog"> BLOG </a>
           </li>
@@ -329,17 +459,137 @@
           <div class="h-full overflow-y-auto bg-white pb-10">
             <nav class="relative z-[101] w-full bg-white px-5">
               <ul class="relative z-[101] space-y-6 text-lg">
-                <li class="mobile-link">
-                  <a
-                    href="https://www.hairofistanbul.com/hair-transplantation-fue/"
-                    class="flex items-center gap-3 text-gray-700 hover:text-primary-400"
-                  >
-                    <i
-                      data-lucide="stethoscope"
-                      class="size-6 text-primary-400"
-                    ></i>
-                    <span>TREATMENTS</span>
-                  </a>
+                <li class="mobile-link group">
+                  <div class="flex flex-col">
+                    <button
+                      class="flex w-full items-center justify-between text-gray-700 hover:text-primary-400"
+                    >
+                      <div class="flex items-center gap-3">
+                        <i
+                          data-lucide="stethoscope"
+                          class="size-6 text-primary-400"
+                        ></i>
+                        <span>TREATMENTS</span>
+                      </div>
+                      <i
+                        data-lucide="chevron-down"
+                        class="size-5 transition-transform duration-300 group-hover:rotate-180"
+                      ></i>
+                    </button>
+
+                    <!-- Dropdown Content with Grid Rows Animation -->
+                    <div
+                      class="grid grid-rows-[0fr] transition-all duration-300 ease-in-out group-hover:grid-rows-[1fr]"
+                    >
+                      <div class="overflow-hidden">
+                        <div class="space-y-0 pt-4">
+                          <a
+                            href="https://www.hairofistanbul.com/hair-transplantation-fue/"
+                            class="flex flex-col rounded-lg border border-transparent px-2 py-3 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                          >
+                            <span class="text-xs font-semibold text-neutral-700"
+                              >Hair Transplant</span
+                            >
+                            <span class="text-xs text-neutral-500"
+                              >Professional hair transplantation services</span
+                            >
+                          </a>
+                          <a
+                            href="https://www.hairofistanbul.com/beard-transplant/"
+                            class="flex flex-col rounded-lg border border-transparent px-2 py-3 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                          >
+                            <span class="text-xs font-semibold text-neutral-700"
+                              >Beard Transplant</span
+                            >
+                            <span class="text-xs text-neutral-500"
+                              >Get a fuller, natural-looking beard</span
+                            >
+                          </a>
+                          <a
+                            href="https://www.hairofistanbul.com/afro-type-hair-transplant/"
+                            class="flex flex-col rounded-lg border border-transparent px-2 py-3 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                          >
+                            <span class="text-xs font-semibold text-neutral-700"
+                              >Afro Type</span
+                            >
+                            <span class="text-xs text-neutral-500"
+                              >Specialized techniques for afro-textured
+                              hair</span
+                            >
+                          </a>
+                          <a
+                            href="https://www.hairofistanbul.com/woman-hair-transplant/"
+                            class="flex flex-col rounded-lg border border-transparent px-2 py-3 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                          >
+                            <span class="text-xs font-semibold text-neutral-700"
+                              >Woman Hair Transplant</span
+                            >
+                            <span class="text-xs text-neutral-500"
+                              >Custom solutions for female pattern hair
+                              loss</span
+                            >
+                          </a>
+                          <a
+                            href="https://www.hairofistanbul.com/forehead-reduction/"
+                            class="flex flex-col rounded-lg border border-transparent px-2 py-3 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                          >
+                            <span class="text-xs font-semibold text-neutral-700"
+                              >Forehead Reduction</span
+                            >
+                            <span class="text-xs text-neutral-500"
+                              >Achieve a more balanced facial proportion</span
+                            >
+                          </a>
+                          <a
+                            href="https://www.hairofistanbul.com/fue-technique/"
+                            class="flex flex-col rounded-lg border border-transparent px-2 py-3 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                          >
+                            <span class="text-xs font-semibold text-neutral-700"
+                              >FUE Technique</span
+                            >
+                            <span class="text-xs text-neutral-500"
+                              >Advanced follicular unit extraction method</span
+                            >
+                          </a>
+                          <a
+                            href="https://www.hairofistanbul.com/dhi-technique/"
+                            class="flex flex-col rounded-lg border border-transparent px-2 py-3 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                          >
+                            <span class="text-xs font-semibold text-neutral-700"
+                              >DHI Technique</span
+                            >
+                            <span class="text-xs text-neutral-500"
+                              >Direct hair implantation for precise
+                              results</span
+                            >
+                          </a>
+                          <a
+                            href="https://www.hairofistanbul.com/scalp-micropigmentation/"
+                            class="flex flex-col rounded-lg border border-transparent px-2 py-3 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                          >
+                            <span class="text-xs font-semibold text-neutral-700"
+                              >Scalp Micropigmentation</span
+                            >
+                            <span class="text-xs text-neutral-500"
+                              >Non-surgical solution for fuller appearance</span
+                            >
+                          </a>
+                          <a
+                            href="https://www.hairofistanbul.com/revision-hair-transplant/"
+                            class="flex flex-col rounded-lg border border-transparent px-2 py-3 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                          >
+                            <span class="text-xs font-semibold text-neutral-700"
+                              >Revision Hair Transplant</span
+                            >
+                            <span class="text-xs text-neutral-500"
+                              >Corrective procedures for previous
+                              treatments</span
+                            >
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </li>
                 <li class="mobile-link">
                   <a
@@ -476,7 +726,7 @@
                   target="_blank"
                   href="https://api.whatsapp.com/send/?phone=905326505151&text=Hello%2C+I+would+like+to+get+information+about+Hair+of+Istanbul.&type=phone_number&app_absent=0"
                   aria-label="Contact us via Whatsapp +90 532 650 51 51"
-                  class="hover:underline focus:outline-none focus:ring-2 focus:ring-primary-300"
+                  class="text-sm font-semibold hover:underline focus:outline-none focus:ring-2 focus:ring-primary-300"
                 >
                   +90 532 650 51 51
                 </a>
@@ -648,7 +898,7 @@
             </nav>
 
             <form
-              class="relative z-50 flex w-full flex-shrink-0 flex-col gap-2.5 border border-neutral-100 bg-white px-4 pt-4 transition-colors duration-500 sm:w-[27.5rem] sm:rounded-3xl sm:px-8 sm:hover:border-primary-400"
+              class="relative z-50 flex w-full flex-shrink-0 flex-col gap-2.5 border border-neutral-100 bg-white/75 px-4 pt-4 backdrop-blur transition-colors duration-500 sm:w-[27.5rem] sm:rounded-3xl sm:px-8 sm:hover:border-primary-400"
               aria-label="Contact Form"
               id="contact-form"
             >
@@ -666,7 +916,7 @@
                   autocomplete="name"
                   aria-required="true"
                   class="h-12 w-full rounded border border-neutral-200 px-3 py-2 outline-none focus:border-primary-400 focus:ring-1 focus:ring-primary-100"
-                  placeholder="Please enter your full name"
+                  placeholder="Your full name"
                 />
               </div>
 
