@@ -4,8 +4,9 @@
     <meta charset="UTF-8" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
     />
+
     <link rel="icon" href="assets/images/favicon.ico" />
     <title>Hair of Istanbul | Worlds Leading Hair Transplant Clinic</title>
     <meta
@@ -93,6 +94,7 @@
       >
         <img
           src="assets/images/brand.svg"
+          alt="Hair of Istanbul Logo"
           class="w-[12.5rem] -translate-y-[25%]"
         />
 
@@ -1431,6 +1433,7 @@
                 <a
                   href="https://www.hairofistanbul.com/hair-transplantation-fue/"
                   class="font-semibold text-primary-400 hover:underline"
+                  aria-label="Read more about Hair Transplant"
                 >
                   Read More
                 </a>
@@ -1465,6 +1468,7 @@
                 <a
                   href="https://www.hairofistanbul.com/beard-transplant/"
                   class="font-semibold text-primary-400 hover:underline"
+                  aria-label="Read more about Beard Transplant"
                 >
                   Read More
                 </a>
@@ -1498,6 +1502,7 @@
                 <a
                   href="https://www.hairofistanbul.com/afro-type-hair-transplant/"
                   class="font-semibold text-primary-400 hover:underline"
+                  aria-label="Read more about Afro Type Hair Transplant"
                 >
                   Read More
                 </a>
@@ -1532,6 +1537,7 @@
                 <a
                   href="https://www.hairofistanbul.com/woman-hair-transplant/"
                   class="font-semibold text-primary-400 hover:underline"
+                  aria-label="Read more about Woman Hair Transplant"
                 >
                   Read More
                 </a>
@@ -1692,6 +1698,13 @@
 
                 scrollerContent.forEach(item => {
                   const duplicatedItem = item.cloneNode(true)
+                  // Kopyalanan elementlerdeki interaktif özellikleri kaldır
+                  const links = duplicatedItem.querySelectorAll('a')
+                  links.forEach(link => {
+                    link.removeAttribute('href')
+                    link.style.pointerEvents = 'none'
+                    link.tabIndex = -1
+                  })
                   duplicatedItem.setAttribute('aria-hidden', true)
                   scrollerInner.appendChild(duplicatedItem)
                 })
