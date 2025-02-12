@@ -87,6 +87,8 @@
     <header>
       <!-- Desktop Navigation -->
       <nav
+        aria-label="Desktop navigation"
+        role="navigation"
         class="relative z-[100] mx-auto hidden max-w-7xl items-start justify-between gap-12 px-4 pb-2 pt-6 lg:flex"
       >
         <img
@@ -95,137 +97,258 @@
         />
 
         <ul
-          class="group flex w-fit flex-wrap items-end justify-end gap-x-6 gap-y-3 text-end text-xs tracking-wide text-neutral-950 xl:translate-y-[10%] xl:text-sm"
+          class="group flex w-fit translate-y-[40%] flex-wrap items-end justify-end gap-x-6 gap-y-3 text-end text-xs tracking-wide text-neutral-950 transition-none [@media(min-width:80.938rem)]:translate-y-[20%] [@media(min-width:80.938rem)]:text-sm"
         >
           <li
             class="group/treatments relative transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
           >
-            <a
-              href="https://www.hairofistanbul.com/hair-transplantation-fue/"
-              class="flex items-center"
-            >
-              TREATMENTS
-              <i data-lucide="chevron-down" class="ml-1 h-4 w-4"></i>
-            </a>
+            <button class="flex items-center">
+              <span itemprop="name">TREATMENTS</span>
+              <i
+                data-lucide="chevron-down"
+                class="ml-1 h-4 w-4"
+                aria-hidden="true"
+              ></i>
+            </button>
             <!-- Mega menu dropdown -->
             <div
               style="scrollbar-width: none; -ms-overflow-style: none"
-              class="pointer-events-none absolute left-0 top-full w-[600px] pt-4 group-hover/treatments:pointer-events-auto"
+              class="pointer-events-none absolute left-0 top-full w-[37.5rem] pt-4 group-hover/treatments:pointer-events-auto"
+              role="menu"
+              aria-label="Treatment options submenu"
             >
               <div
                 class="rounded-lg border border-neutral-200 bg-white/75 opacity-0 backdrop-blur transition-all duration-300 group-hover/treatments:opacity-100"
               >
                 <div
                   class="grid max-h-[70vh] grid-cols-2 gap-4 overflow-y-auto p-4"
+                  itemscope
+                  itemtype="http://schema.org/ItemList"
                 >
                   <!-- Sol Sütun -->
                   <div class="space-y-4 text-left">
                     <a
                       href="https://www.hairofistanbul.com/hair-transplantation-fue/"
                       class="block rounded-lg border border-transparent p-4 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                      role="menuitem"
+                      itemprop="itemListElement"
+                      itemscope
+                      itemtype="http://schema.org/MedicalProcedure"
+                      title="Hair Transplant Procedure Details"
+                      aria-label="Learn more about our hair transplant procedures"
                     >
-                      <div class="mb-1 text-xs font-semibold text-neutral-700">
+                      <div
+                        class="mb-1 text-xs font-semibold text-neutral-700"
+                        itemprop="name"
+                      >
                         Hair Transplant
                       </div>
-                      <p class="text-xs text-neutral-500">
+                      <p
+                        class="text-xs text-neutral-500"
+                        itemprop="description"
+                      >
                         Professional hair transplantation services with modern
                         techniques.
                       </p>
                     </a>
+
                     <a
                       href="https://www.hairofistanbul.com/beard-transplant/"
                       class="block rounded-lg border border-transparent p-4 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                      role="menuitem"
+                      itemprop="itemListElement"
+                      itemscope
+                      itemtype="http://schema.org/MedicalProcedure"
+                      title="Beard Transplant Information"
+                      aria-label="Discover our beard transplant services"
                     >
-                      <div class="mb-1 text-xs font-semibold text-neutral-700">
+                      <div
+                        class="mb-1 text-xs font-semibold text-neutral-700"
+                        itemprop="name"
+                      >
                         Beard Transplant
                       </div>
-                      <p class="text-xs text-neutral-500">
+                      <p
+                        class="text-xs text-neutral-500"
+                        itemprop="description"
+                      >
                         Get a fuller, natural-looking beard with our specialized
                         transplant service.
                       </p>
                     </a>
+
                     <a
                       href="https://www.hairofistanbul.com/afro-type-hair-transplant/"
                       class="block rounded-lg border border-transparent p-4 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                      role="menuitem"
+                      itemprop="itemListElement"
+                      itemscope
+                      itemtype="http://schema.org/MedicalProcedure"
+                      title="Afro Hair Type Transplant Details"
+                      aria-label="Learn about our specialized afro hair transplant techniques"
                     >
-                      <div class="mb-1 text-xs font-semibold text-neutral-700">
+                      <div
+                        class="mb-1 text-xs font-semibold text-neutral-700"
+                        itemprop="name"
+                      >
                         Afro Type
                       </div>
-                      <p class="text-xs text-neutral-500">
+                      <p
+                        class="text-xs text-neutral-500"
+                        itemprop="description"
+                      >
                         Specialized techniques for afro-textured hair
                         transplantation.
                       </p>
                     </a>
+
                     <a
                       href="https://www.hairofistanbul.com/woman-hair-transplant/"
                       class="block rounded-lg border border-transparent p-4 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                      role="menuitem"
+                      itemprop="itemListElement"
+                      itemscope
+                      itemtype="http://schema.org/MedicalProcedure"
+                      title="Women's Hair Transplant Information"
+                      aria-label="Explore our women's hair transplant solutions"
                     >
-                      <div class="mb-1 text-xs font-semibold text-neutral-700">
+                      <div
+                        class="mb-1 text-xs font-semibold text-neutral-700"
+                        itemprop="name"
+                      >
                         Woman Hair Transplant
                       </div>
-                      <p class="text-xs text-neutral-500">
+                      <p
+                        class="text-xs text-neutral-500"
+                        itemprop="description"
+                      >
                         Custom solutions for female pattern hair loss and
                         thinning.
                       </p>
                     </a>
+
                     <a
                       href="https://www.hairofistanbul.com/forehead-reduction/"
                       class="block rounded-lg border border-transparent p-4 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                      role="menuitem"
+                      itemprop="itemListElement"
+                      itemscope
+                      itemtype="http://schema.org/MedicalProcedure"
+                      title="Forehead Reduction Surgery Information"
+                      aria-label="Learn about our forehead reduction procedures"
                     >
-                      <div class="mb-1 text-xs font-semibold text-neutral-700">
+                      <div
+                        class="mb-1 text-xs font-semibold text-neutral-700"
+                        itemprop="name"
+                      >
                         Forehead Reduction
                       </div>
-                      <p class="text-xs text-neutral-500">
+                      <p
+                        class="text-xs text-neutral-500"
+                        itemprop="description"
+                      >
                         Surgical technique to achieve a more balanced facial
                         proportion.
                       </p>
                     </a>
                   </div>
+
                   <!-- Sağ Sütun -->
                   <div class="space-y-4 text-left">
                     <a
                       href="https://www.hairofistanbul.com/fue-technique/"
                       class="block rounded-lg border border-transparent p-4 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                      role="menuitem"
+                      itemprop="itemListElement"
+                      itemscope
+                      itemtype="http://schema.org/MedicalProcedure"
+                      title="FUE Technique Details"
+                      aria-label="Learn about the FUE hair transplant technique"
                     >
-                      <div class="mb-1 text-xs font-semibold text-neutral-700">
+                      <div
+                        class="mb-1 text-xs font-semibold text-neutral-700"
+                        itemprop="name"
+                      >
                         FUE Technique
                       </div>
-                      <p class="text-xs text-neutral-500">
+                      <p
+                        class="text-xs text-neutral-500"
+                        itemprop="description"
+                      >
                         Advanced follicular unit extraction method for natural
                         results.
                       </p>
                     </a>
+
                     <a
                       href="https://www.hairofistanbul.com/dhi-technique/"
                       class="block rounded-lg border border-transparent p-4 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                      role="menuitem"
+                      itemprop="itemListElement"
+                      itemscope
+                      itemtype="http://schema.org/MedicalProcedure"
+                      title="DHI Technique Information"
+                      aria-label="Discover the DHI hair transplant method"
                     >
-                      <div class="mb-1 text-xs font-semibold text-neutral-700">
+                      <div
+                        class="mb-1 text-xs font-semibold text-neutral-700"
+                        itemprop="name"
+                      >
                         DHI Technique
                       </div>
-                      <p class="text-xs text-neutral-500">
+                      <p
+                        class="text-xs text-neutral-500"
+                        itemprop="description"
+                      >
                         Direct hair implantation for precise and dense hair
                         restoration.
                       </p>
                     </a>
+
                     <a
                       href="https://www.hairofistanbul.com/scalp-micropigmentation/"
                       class="block rounded-lg border border-transparent p-4 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                      role="menuitem"
+                      itemprop="itemListElement"
+                      itemscope
+                      itemtype="http://schema.org/MedicalProcedure"
+                      title="Scalp Micropigmentation Details"
+                      aria-label="Learn about our scalp micropigmentation service"
                     >
-                      <div class="mb-1 text-xs font-semibold text-neutral-700">
+                      <div
+                        class="mb-1 text-xs font-semibold text-neutral-700"
+                        itemprop="name"
+                      >
                         Scalp Micropigmentation
                       </div>
-                      <p class="text-xs text-neutral-500">
+                      <p
+                        class="text-xs text-neutral-500"
+                        itemprop="description"
+                      >
                         Non-surgical solution for the appearance of fuller hair.
                       </p>
                     </a>
+
                     <a
                       href="https://www.hairofistanbul.com/revision-hair-transplant/"
                       class="block rounded-lg border border-transparent p-4 transition-colors hover:border-primary-200 hover:bg-primary-50/25"
+                      role="menuitem"
+                      itemprop="itemListElement"
+                      itemscope
+                      itemtype="http://schema.org/MedicalProcedure"
+                      title="Revision Hair Transplant Information"
+                      aria-label="Explore our revision hair transplant solutions"
                     >
-                      <div class="mb-1 text-xs font-semibold text-neutral-700">
+                      <div
+                        class="mb-1 text-xs font-semibold text-neutral-700"
+                        itemprop="name"
+                      >
                         Revision Hair Transplant
                       </div>
-                      <p class="text-xs text-neutral-500">
+                      <p
+                        class="text-xs text-neutral-500"
+                        itemprop="description"
+                      >
                         Corrective procedures for previous hair transplant
                         treatments.
                       </p>
@@ -235,59 +358,162 @@
               </div>
             </div>
           </li>
+          <!-- AFTER CARE -->
           <li
             class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
+            itemprop="hasPart"
+            itemscope
+            itemtype="http://schema.org/WebPage"
           >
-            <a href="https://www.hairofistanbul.com/after-care/">
-              AFTER CARE
+            <a
+              href="https://www.hairofistanbul.com/after-care/"
+              title="Post-Treatment Care Instructions"
+              aria-label="Learn about after care procedures"
+              itemprop="url"
+            >
+              <span itemprop="name">AFTER CARE</span>
             </a>
           </li>
+
+          <!-- OUR CLINIC -->
           <li
             class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
+            itemprop="hasPart"
+            itemscope
+            itemtype="http://schema.org/MedicalClinic"
           >
-            <a href="https://www.hairofistanbul.com/our-clinic/">
-              OUR CLINIC
+            <a
+              href="https://www.hairofistanbul.com/our-clinic/"
+              title="About Hair of Istanbul Clinic"
+              aria-label="Information about our clinic and facilities"
+              itemprop="url"
+            >
+              <span class="block xl:hidden" itemprop="alternateName"
+                >CLINIC</span
+              >
+              <span class="hidden xl:block" itemprop="name">OUR CLINIC</span>
             </a>
           </li>
+
+          <!-- HAIR CLINIC TEAM -->
           <li
             class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
+            itemprop="hasPart"
+            itemscope
+            itemtype="http://schema.org/MedicalTeam"
           >
-            <a href="https://www.hairofistanbul.com/medical-team/">
-              HAIR CLINIC TEAM
+            <a
+              href="https://www.hairofistanbul.com/medical-team/"
+              title="Our Expert Medical Team"
+              aria-label="Meet our professional hair transplant team"
+              itemprop="url"
+            >
+              <span class="block xl:hidden" itemprop="alternateName"
+                >HAIR TEAM</span
+              >
+              <span class="hidden xl:block" itemprop="name"
+                >HAIR CLINIC TEAM</span
+              >
             </a>
           </li>
+
+          <!-- GALLERY -->
           <li
             class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
+            itemprop="hasPart"
+            itemscope
+            itemtype="http://schema.org/ImageGallery"
           >
-            <a href="https://www.hairofistanbul.com/gallery/"> GALLERY </a>
-          </li>
-          <li
-            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
-          >
-            <a href="https://www.hairofistanbul.com/before-after/">
-              HAIR TRANSPLANT BEFORE & AFTER
+            <a
+              href="https://www.hairofistanbul.com/gallery/"
+              title="Hair Transplant Procedure Gallery"
+              aria-label="View our gallery of procedures"
+              itemprop="url"
+            >
+              <span itemprop="name">GALLERY</span>
             </a>
           </li>
+
+          <!-- BEFORE & AFTER -->
           <li
             class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
+            itemprop="hasPart"
+            itemscope
+            itemtype="http://schema.org/ImageGallery"
           >
-            <a href="https://www.hairofistanbul.com/faq/"> FAQ </a>
+            <a
+              href="https://www.hairofistanbul.com/before-after/"
+              title="Hair Transplant Results"
+              aria-label="See before and after results of our procedures"
+              itemprop="url"
+            >
+              <span class="block xl:hidden" itemprop="alternateName"
+                >BEFORE & AFTER</span
+              >
+              <span class="hidden xl:block" itemprop="name"
+                >HAIR TRANSPLANT BEFORE & AFTER</span
+              >
+            </a>
           </li>
+
+          <!-- FAQ -->
           <li
             class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
+            itemprop="hasPart"
+            itemscope
+            itemtype="http://schema.org/FAQPage"
           >
-            <a href="https://www.hairofistanbul.com/contact/"> CONTACT </a>
+            <a
+              href="https://www.hairofistanbul.com/faq/"
+              title="Frequently Asked Questions"
+              aria-label="Find answers to common questions"
+              itemprop="url"
+            >
+              <span itemprop="name">FAQ</span>
+            </a>
           </li>
+
+          <!-- CONTACT -->
           <li
             class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
+            itemprop="hasPart"
+            itemscope
+            itemtype="http://schema.org/ContactPage"
           >
-            <a href="https://www.hairofistanbul.com/blog"> BLOG </a>
+            <a
+              href="https://www.hairofistanbul.com/contact/"
+              title="Contact Hair of Istanbul"
+              aria-label="Get in touch with us"
+              itemprop="url"
+            >
+              <span itemprop="name">CONTACT</span>
+            </a>
+          </li>
+
+          <!-- BLOG -->
+          <li
+            class="transition-[colors_opacity] duration-300 ease-in-out hover:text-primary-400 hover:!opacity-100 group-hover:[&:not(:hover)]:opacity-50"
+            itemprop="hasPart"
+            itemscope
+            itemtype="http://schema.org/Blog"
+          >
+            <a
+              href="https://www.hairofistanbul.com/blog"
+              title="Hair Transplant Blog"
+              aria-label="Read our latest articles and updates"
+              itemprop="url"
+            >
+              <span itemprop="name">BLOG</span>
+            </a>
           </li>
         </ul>
       </nav>
 
       <!-- Mobile Navigation -->
       <div
+        aria-label="Mobile navigation"
+        aria-hidden="true"
+        role="presentation"
         class="absolute top-0 z-[100] flex w-full flex-col items-center gap-4 py-4 lg:hidden"
       >
         <!-- Social Media Links -->
@@ -421,7 +647,6 @@
         </nav>
         <!-- Navigation -->
         <nav
-          aria-label="Main Navigation"
           class="relative z-[101] mx-auto flex w-full max-w-7xl items-start justify-between gap-12 px-4 pb-2 pt-6 lg:hidden"
         >
           <img
@@ -462,7 +687,7 @@
                 <li class="mobile-link group">
                   <div class="flex flex-col">
                     <button
-                      class="flex w-full items-center justify-between text-gray-700 hover:text-primary-400"
+                      class="flex w-full items-center justify-between text-gray-700 hover:text-primary-400 group-hover:text-primary-400"
                     >
                       <div class="flex items-center gap-3">
                         <i
@@ -1153,7 +1378,7 @@
               src="assets/images/gray-placeholder.webp"
               data-src="assets/images/main/features/background.png"
               alt="Hair Transplant Before After"
-              class="lazy-image -top-[10%] right-[5%] z-10 mx-auto w-full max-w-[32.5rem] object-cover sm:scale-x-[-1] lg:absolute lg:mx-0 lg:h-[26.25rem] lg:w-auto lg:max-w-max"
+              class="lazy-image -top-[25%] right-[2%] z-10 mx-auto w-full max-w-[32.5rem] object-cover sm:scale-x-[-1] lg:absolute lg:mx-0 lg:h-[26.25rem] lg:w-auto lg:max-w-max"
               style="filter: blur(10px)"
             />
             <div class="relative z-20 flex flex-shrink-0 flex-col gap-4">
@@ -1161,7 +1386,7 @@
                 HAIR TRANSPLANT
               </h2>
               <p
-                class="max-w-2xl text-pretty text-sm leading-relaxed tracking-wide text-neutral-600 lg:text-base"
+                class="text-pretty text-sm leading-relaxed tracking-wide text-neutral-600 lg:max-w-2xl lg:text-base"
               >
                 The modern hair transplantation techniques at Hair of Istanbul
                 include FUE, FUE Sapphire, and DHI, which are all designed to
@@ -1180,118 +1405,137 @@
             class="mt-12 grid grid-cols-1 gap-x-16 gap-y-8 bg-primary-100 px-8 py-8 md:mt-24 md:grid-cols-2 md:rounded-xl md:bg-white md:px-0 md:py-0 lg:mt-20 lg:grid-cols-4"
           >
             <!-- Hair Transplant -->
-            <div class="text-center">
-              <img
-                loading="lazy"
-                src="assets/images/gray-placeholder.webp"
-                data-src="assets/images/main/features/1.png"
-                alt="Hair Transplant Service"
-                class="lazy-image mx-auto mb-4"
-                style="filter: blur(10px)"
-              />
-              <h3
-                class="mb-4 text-2xl font-semibold text-primary-400 md:text-lg"
-              >
-                Hair Transplant
-              </h3>
-              <p
-                class="mb-2 text-balance text-center text-sm leading-relaxed tracking-wide"
-              >
-                Individuals aged 18-60, with hair loss due to various reasons,
-                require hair transplantation to fix their receding hairline...
-              </p>
-
-              <a
-                href="https://www.hairofistanbul.com/hair-transplantation-fue/"
-                class="font-semibold text-primary-400 hover:underline"
-                >Read More</a
-              >
+            <div class="flex h-full flex-col text-center">
+              <div class="flex-1">
+                <img
+                  loading="lazy"
+                  src="assets/images/gray-placeholder.webp"
+                  data-src="assets/images/main/features/1.png"
+                  alt="Hair Transplant Service"
+                  class="lazy-image mx-auto mb-4"
+                  style="filter: blur(10px)"
+                />
+                <h3
+                  class="mb-4 text-2xl font-semibold text-primary-400 md:text-lg"
+                >
+                  Hair Transplant
+                </h3>
+                <p
+                  class="mb-2 text-balance text-center text-sm leading-relaxed tracking-wide"
+                >
+                  Individuals aged 18-60, with hair loss due to various reasons,
+                  require hair transplantation to fix their receding hairline...
+                </p>
+              </div>
+              <div class="mt-auto sm:pt-4">
+                <a
+                  href="https://www.hairofistanbul.com/hair-transplantation-fue/"
+                  class="font-semibold text-primary-400 hover:underline"
+                >
+                  Read More
+                </a>
+              </div>
             </div>
 
-            <!-- Repeat for other services -->
-            <div class="text-center">
-              <img
-                loading="lazy"
-                src="assets/images/gray-placeholder.webp"
-                data-src="assets/images/main/features/2.png"
-                alt="Beard Transplant Service"
-                class="lazy-image mx-auto mb-4"
-                style="filter: blur(10px)"
-              />
-              <h3
-                class="mb-4 text-2xl font-semibold text-primary-400 md:text-lg"
-              >
-                Beard Transplant
-              </h3>
-              <p
-                class="mb-2 text-balance text-center text-sm leading-relaxed tracking-wide"
-              >
-                Generally, men aged 20 years or older who are born without the
-                ability to grow a beard or have lost their beard due to
-                varying...
-              </p>
-
-              <a
-                href="https://www.hairofistanbul.com/beard-transplant/"
-                class="font-semibold text-primary-400 hover:underline"
-                >Read More</a
-              >
+            <!-- Beard Transplant -->
+            <div class="flex h-full flex-col text-center">
+              <div class="flex-1">
+                <img
+                  loading="lazy"
+                  src="assets/images/gray-placeholder.webp"
+                  data-src="assets/images/main/features/2.png"
+                  alt="Beard Transplant Service"
+                  class="lazy-image mx-auto mb-4"
+                  style="filter: blur(10px)"
+                />
+                <h3
+                  class="mb-4 text-2xl font-semibold text-primary-400 md:text-lg"
+                >
+                  Beard Transplant
+                </h3>
+                <p
+                  class="mb-2 text-balance text-center text-sm leading-relaxed tracking-wide"
+                >
+                  Generally, men aged 20 years or older who are born without the
+                  ability to grow a beard or have lost their beard due to
+                  varying...
+                </p>
+              </div>
+              <div class="mt-auto sm:pt-4">
+                <a
+                  href="https://www.hairofistanbul.com/beard-transplant/"
+                  class="font-semibold text-primary-400 hover:underline"
+                >
+                  Read More
+                </a>
+              </div>
             </div>
 
-            <div class="text-center">
-              <img
-                loading="lazy"
-                src="assets/images/gray-placeholder.webp"
-                data-src="assets/images/main/features/3.png"
-                alt="Afro Type Service"
-                class="lazy-image mx-auto mb-4"
-                style="filter: blur(10px)"
-              />
-              <h3
-                class="mb-4 text-2xl font-semibold text-primary-400 md:text-lg"
-              >
-                Afro Type
-              </h3>
-              <p
-                class="mb-2 text-balance text-center text-sm leading-relaxed tracking-wide"
-              >
-                Afro Hair Transplants are more difficult since tightly coiled
-                hair follicles are much harder to extract when compared...
-              </p>
-
-              <a
-                href="https://www.hairofistanbul.com/afro-type-hair-transplant/"
-                class="font-semibold text-primary-400 hover:underline"
-                >Read More</a
-              >
+            <!-- Afro Type -->
+            <div class="flex h-full flex-col text-center">
+              <div class="flex-1">
+                <img
+                  loading="lazy"
+                  src="assets/images/gray-placeholder.webp"
+                  data-src="assets/images/main/features/3.png"
+                  alt="Afro Type Service"
+                  class="lazy-image mx-auto mb-4"
+                  style="filter: blur(10px)"
+                />
+                <h3
+                  class="mb-4 text-2xl font-semibold text-primary-400 md:text-lg"
+                >
+                  Afro Type
+                </h3>
+                <p
+                  class="mb-2 text-balance text-center text-sm leading-relaxed tracking-wide"
+                >
+                  Afro Hair Transplants are more difficult since tightly coiled
+                  hair follicles are much harder to extract when compared...
+                </p>
+              </div>
+              <div class="mt-auto sm:pt-4">
+                <a
+                  href="https://www.hairofistanbul.com/afro-type-hair-transplant/"
+                  class="font-semibold text-primary-400 hover:underline"
+                >
+                  Read More
+                </a>
+              </div>
             </div>
 
-            <div class="text-center">
-              <img
-                loading="lazy"
-                src="assets/images/gray-placeholder.webp"
-                data-src="assets/images/main/features/4.png"
-                alt="Woman Hair Transplant Service"
-                class="lazy-image mx-auto mb-4"
-                style="filter: blur(10px)"
-              />
-              <h3
-                class="mb-4 text-2xl font-semibold text-primary-400 md:text-lg"
-              >
-                Woman Hair Transplant
-              </h3>
-              <p
-                class="mb-2 text-balance text-center text-sm leading-relaxed tracking-wide"
-              >
-                Woman Hair Transplant is considered suitable for women of every
-                ethnic group who are suffering from any kind of hair thinning...
-              </p>
-
-              <a
-                href="https://www.hairofistanbul.com/woman-hair-transplant/"
-                class="font-semibold text-primary-400 hover:underline"
-                >Read More</a
-              >
+            <!-- Woman Hair Transplant -->
+            <div class="flex h-full flex-col text-center">
+              <div class="flex-1">
+                <img
+                  loading="lazy"
+                  src="assets/images/gray-placeholder.webp"
+                  data-src="assets/images/main/features/4.png"
+                  alt="Woman Hair Transplant Service"
+                  class="lazy-image mx-auto mb-4"
+                  style="filter: blur(10px)"
+                />
+                <h3
+                  class="mb-4 text-2xl font-semibold text-primary-400 md:text-lg"
+                >
+                  Woman Hair Transplant
+                </h3>
+                <p
+                  class="mb-2 text-balance text-center text-sm leading-relaxed tracking-wide"
+                >
+                  Woman Hair Transplant is considered suitable for women of
+                  every ethnic group who are suffering from any kind of hair
+                  thinning...
+                </p>
+              </div>
+              <div class="mt-auto sm:pt-4">
+                <a
+                  href="https://www.hairofistanbul.com/woman-hair-transplant/"
+                  class="font-semibold text-primary-400 hover:underline"
+                >
+                  Read More
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -1526,7 +1770,7 @@
           </span>
 
           <div
-            class="pointer-events-none absolute inset-0 animate-ping rounded-full bg-green-500 opacity-20 group-hover:opacity-30"
+            class="pointer-events-none absolute inset-0 animate-ping rounded-full bg-primary-500 opacity-20 group-hover:opacity-30"
           ></div>
 
           <div
